@@ -1,0 +1,42 @@
+.contact-img img {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  .contact-img {
+    max-width: 400px;
+  }
+  .contact-container {
+    box-shadow: 0 10px 30px gray;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 auto;
+    max-width: 900px;
+  }
+  .info {
+    display: flex;
+    gap: 20px;
+  }
+  .contact-container > form > textarea {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+    height: 150px;
+  }
+  .contact-container > form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-container input {
+    width: 100%;
+  }
+  #contactUs {
+    margin: 50px auto;
+  }
+  @media (max-width: 900px) {
+    .contact-container {
+      margin: 10px;
+    }
+  }

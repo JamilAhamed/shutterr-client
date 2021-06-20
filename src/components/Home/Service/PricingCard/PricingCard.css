@@ -1,0 +1,60 @@
+.pricing-card img{
+    width: 64px;
+    margin: 20px auto;
+    transition: all .4s ease-in-out;
+    
+    
+}
+.pricing-card img:hover{
+    cursor: pointer;
+  animation: bounce .8s linear;
+}
+@keyframes bounce {
+  
+    20%,50%,80%,to{
+        transform:translateY(0)
+    }
+    40%{
+        transform: translateY(-30px);
+    }
+    70%{
+        transform: translateY(-15px);
+    }
+    90%{
+        transform: translateY(-5px);
+    }
+}
+.check{
+    width: 10px;
+}
+.pricing-card{
+    padding: 2rem 20px;
+display: flex;
+flex-direction: column;
+    text-align: center;
+    max-width: 400px;
+    border: 1px solid #00A7C8;
+    border-radius: 10px;
+    transform: scale(0.9);
+    transition: all 0.3s ease-in-out;
+}
+.pricing-card:hover{
+    box-shadow: 0 10px 15px gray;
+   transform: scale(1);
+}
+
+.feature-div{
+    margin: 1rem auto;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 4px 1fr;
+    gap: 1rem;
+}
+.price-div{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    grid-gap: 10px;
+    margin-top: 1rem;
+    margin-inline: auto;
+}

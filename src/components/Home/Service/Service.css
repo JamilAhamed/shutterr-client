@@ -1,0 +1,6 @@
+.std-card-container {
+    justify-content: center;
+    gap: 50px;
+    display: flex;
+    flex-wrap: wrap;
+  }

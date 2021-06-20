@@ -1,0 +1,9 @@
+.order-list {
+    display: flex;
+  }
+  .dashboard-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
