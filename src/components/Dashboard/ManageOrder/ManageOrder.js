@@ -24,7 +24,7 @@ const ManageOrder = () => {
     }, []);
 
     useEffect(() => {
-        fetch('http://localhost:5000/allOrders')
+        fetch('https://immense-retreat-81053.herokuapp.com/allOrders')
             .then(res => res.json())
             .then(data => setAllOrders(data))
     }, [update]);
@@ -42,7 +42,7 @@ const ManageOrder = () => {
                         swal("Sorry!", "You are a demo admin", "warning");
                     }
                     else {
-                        fetch(`http://localhost:5000/deleteOrder/${id}`, {
+                        fetch(`https://immense-retreat-81053.herokuapp.com/deleteOrder/${id}`, {
                             method: "DELETE"
                         })
                             .then(res => res.json())
@@ -65,7 +65,7 @@ const ManageOrder = () => {
     }
     const handleUpdate = (updatedData) => {
         const { id, value } = updatedData;
-        fetch(`http://localhost:5000/updateOrder/${id}`, {
+        fetch(`https://immense-retreat-81053.herokuapp.com/updateOrder/${id}`, {
             method: "PATCH",
             headers: { "content-type": "application/json" },
             body: JSON.stringify({ status: value })

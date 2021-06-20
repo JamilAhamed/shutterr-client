@@ -25,7 +25,7 @@ const AddReview = () => {
       formData.append('location', data.location);
       formData.append('comment', data.comment);
 
-      fetch('http://localhost:5000/addReview', {
+      fetch('https://immense-retreat-81053.herokuapp.com/addReview', {
         method: 'POST',
         body: formData
       })

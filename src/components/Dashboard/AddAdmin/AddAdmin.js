@@ -21,12 +21,11 @@ const AddAdmin = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = data => {
     if (!demo) {
-      fetch('http://localhost:5000/addAdmin', {
+      fetch('https://immense-retreat-81053.herokuapp.com/addAdmin', {
         method: 'POST',
         headers: {
           "content-type": "application/json"
         },
-
         body: JSON.stringify(data)
       })
         .then(response => response.json())
@@ -53,7 +52,6 @@ const AddAdmin = () => {
           <h1>Make a user ADMIN</h1>
         </div>
         <div className="form-container">
-
           <form onSubmit={handleSubmit(onSubmit)}>
             <input type="email" name="email" required placeholder="Enter an email address" ref={register} />
             <div className="btn_div">
@@ -62,7 +60,6 @@ const AddAdmin = () => {
           </form>
         </div>
       </div>
-
     </section>
   );
 };

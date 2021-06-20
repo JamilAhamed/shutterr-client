@@ -42,7 +42,6 @@ const PricingCard = ({ data, handleClick }) => {
                 <h4>Router with Connection: <span className="value">  {router}  </span></h4>
             </div>
             <button onClick={() => handleClick(_id)} className="brand-btn"> Get Started </button>
-
         </div>
     );
 };

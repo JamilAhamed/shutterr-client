@@ -31,7 +31,7 @@ const AddFeature = () => {
       formData.append('file', file);
       formData.append('subject', data.subject);
       formData.append('details', data.details);
-      fetch('http://localhost:5000/addAFeature', {
+      fetch('https://immense-retreat-81053.herokuapp.com/addAFeature', {
         method: 'POST',
         body: formData
       })
@@ -46,29 +46,6 @@ const AddFeature = () => {
         })
     }
   }
-//   const onSubmit = data => {
-//       if (demo) {
-//         swal("Sorry!", "You are a demo admin", "warning");
-//      }
-//        else {
-         
-//          fetch('http://localhost:5000/addAFeature', {
-//           method: 'POST',
-//           headers: {'content-type': 'application/json'},
-//           body: JSON.stringify(data)
-//          })
-//          .then(response => response.json())
-//         .then(success => {
-//           if (success) {
-//             swal("Good job!", "A new features added!", "success");
-//           }
-//         })
-//         .catch(error => {
-//           swal("Error!", `${error}`, "error");
-//         })
-//  }
-// }
-
   const handleFileChange = (e) => {
     const newFile = e.target.files[0];
     setFile(newFile);

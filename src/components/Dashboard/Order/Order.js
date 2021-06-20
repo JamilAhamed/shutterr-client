@@ -13,7 +13,7 @@ const Order = () => {
     const [service, setService] = useState({});
     useEffect(() => {
         if (id) {
-            fetch(`http://localhost:5000/serviceById/${id}`)
+            fetch(`https://immense-retreat-81053.herokuapp.com/serviceById/${id}`)
                 .then(res => res.json())
                 .then(data => setService(data));
         }
@@ -32,7 +32,7 @@ const Order = () => {
             };
 
 
-            fetch('http://localhost:5000/addOrder', {
+            fetch('https://immense-retreat-81053.herokuapp.com/addOrder', {
                 method: 'POST',
                 headers: {
                     "content-type": "application/json"

@@ -4,7 +4,7 @@ import { UserContext } from '../../../App';
 import './Sidebar.css'
 const Sidebar = () => {
     const [userData, setUserData] = useContext(UserContext);
-    const [isAdmin, setIsAdmin] = useState(userData.isAdmin);
+    const [isAdmin, setIsAdmin] = useState(userData.IsAdmin);
 
     return (
         <div className="sidebar">

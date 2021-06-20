@@ -10,7 +10,7 @@ const OrderList = () => {
     const [orders, setOrders] = useState([]);
     const [loading, setLoading] = useState(true);
     useEffect(() => {
-        fetch(`http://localhost:5000/ordersByEmail?email=${user.email}`)
+        fetch(`https://immense-retreat-81053.herokuapp.com/ordersByEmail?email=${user.email}`)
             .then(res => res.json())
             .then(data => {
                 setOrders(data);
@@ -27,7 +27,7 @@ const OrderList = () => {
         })
             .then((willDelete) => {
                 if (willDelete) {
-                    fetch(`http://localhost:5000/deleteOrder/${id}`, {
+                    fetch(`https://immense-retreat-81053.herokuapp.com/deleteOrder/${id}`, {
                         method: "DELETE"
                     })
                         .then(res => res.json())

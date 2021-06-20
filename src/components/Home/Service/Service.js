@@ -7,10 +7,11 @@ const Service = () => {
     const history = useHistory();
     const [serviceData, setServiceData] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:5000/services")
+        fetch("https://immense-retreat-81053.herokuapp.com/services")
             .then(res => res.json())
             .then(data => setServiceData(data))
     });
+    
     const handleClick = (id) => {
         const url = `/dashboard/order/${id}`;
         history.push(url);

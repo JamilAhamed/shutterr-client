@@ -37,7 +37,7 @@ const Login = () => {
             .then((result) => {
                 const { email, displayName, img: photoURL } = result.user;
                 const user = { email, name: displayName, img: photoURL };
-                fetch(`http://localhost:5000/isAdmin?email=${email}`)
+                fetch(`https://immense-retreat-81053.herokuapp.com/isAdmin?email=${email}`)
                     .then(res => res.json())
                     .then(isAdmin => {
                         if (isAdmin) {
@@ -47,21 +47,16 @@ const Login = () => {
                         else {
                             user.isAdmin = 'false';
                             sessionStorage.setItem('user', JSON.stringify(user));
-
                         }
                         setUserData(user);
                         swal(`Hello 🖐 ,${user.name}`, "You are successfully logged in!", "success");
                         history.push(from);
                     });
-
-
             }).catch((error) => {
                 const newUserInfo = {}
                 newUserInfo.error = error.message;
                 sessionStorage.setItem('user', JSON.stringify(newUserInfo));
-
             });
-
     }
 
 
@@ -104,7 +99,7 @@ const Login = () => {
 
     }
 
-    // Submiting the input value to the server.
+    // Submitting the input value to the server.
     const handleSubmit = (event) => {
         if (newUser && user.email && user.password && user.name) {
             firebase.auth().createUserWithEmailAndPassword(user.email, user.password)
@@ -114,7 +109,7 @@ const Login = () => {
                     const newUserInfo = { email, name: displayName };
                     newUserInfo.name = user.name;
                     newUserInfo.error = '';
-                    fetch(`http://localhost:5000/isAdmin?email=${email}`)
+                    fetch(`https://immense-retreat-81053.herokuapp.com/isAdmin?email=${email}`)
                         .then(res => res.json())
                         .then(isAdmin => {
                             if (isAdmin) {
@@ -132,7 +127,6 @@ const Login = () => {
                     console.log(from);
                     updateUserName(user.name);
                     history.push(from);
-
                 })
                 .catch((error) => {
                     const newUserInfo = {};
@@ -148,7 +142,7 @@ const Login = () => {
                     const { email, displayName } = res.user;
                     const newUserInfo = { email, name: displayName };
                     newUserInfo.error = '';
-                    fetch(`http://localhost:5000/isAdmin?email=${email}`)
+                    fetch(`https://immense-retreat-81053.herokuapp.com/isAdmin?email=${email}`)
                         .then(res => res.json())
                         .then(isAdmin => {
                             if (isAdmin) {
@@ -161,7 +155,6 @@ const Login = () => {
                                 sessionStorage.setItem('user', JSON.stringify(newUserInfo));
                                 setUserData(newUserInfo);
                             }
-
                         });
                     swal(`Hello 🖐 ,${newUserInfo.name}`, "Your signed in successfully!", "success");
                     history.push(from);
@@ -189,7 +182,7 @@ const Login = () => {
                 const { email, displayName } = res.user;
                 const newUserInfo = { email, name: displayName };
                 newUserInfo.error = '';
-                fetch(`http://localhost:5000/isAdmin?email=${email}`)
+                fetch(`https://immense-retreat-81053.herokuapp.com/isAdmin?email=${email}`)
                     .then(res => res.json())
                     .then(isAdmin => {
                         if (isAdmin) {
@@ -302,20 +295,14 @@ const Login = () => {
                         {
                             newUser && user.password === user.confirmPassword && <input className="btn" type="submit" value="Submit" />
                         }
-
-
                     </div>
-
                     {
                         !newUser &&
                         <div className="social-links" onClick={handleGoogleSignIn}>
                             <span>Login with Google</span>    <button > <i class="fab fa-google"></i></button>
-
-
                         </div>
                     }
                 </form>
-
             </div>
         </div>
     );

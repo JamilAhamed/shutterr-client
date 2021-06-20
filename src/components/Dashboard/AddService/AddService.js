@@ -35,7 +35,7 @@ const AddService = () => {
             formData.append('bdix', data.bdix);
             formData.append('router', data.router);
 
-            fetch('http://localhost:5000/addService', {
+            fetch('https://immense-retreat-81053.herokuapp.com/addService', {
                 method: 'POST',
                 body: formData
             })

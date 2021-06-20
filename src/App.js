@@ -34,7 +34,6 @@ function App() {
     <UserContext.Provider value={[userData, setUserData]} >
       <Router>
         <ScrollToTop>
-
           <Navbar />
           <Switch>
             <PrivateRoute path="/dashboard/order-list">
@@ -70,9 +69,6 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
-            {/* <Route exact path="*" >
-              <NotMatched />
-            </Route> */}
           </Switch>
           <Footer />
         </ScrollToTop>

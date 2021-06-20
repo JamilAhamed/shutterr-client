@@ -6,7 +6,7 @@ import FooterCol from './FooterCol/FooterCol';
 const Footer = () => {
     const [footer, setFooter] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/footer')
+        fetch('https://immense-retreat-81053.herokuapp.com/footer')
             .then(res => res.json())
         .then(data => setFooter(data))
     },[]);
