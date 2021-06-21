@@ -195,7 +195,6 @@ const Login = () => {
                             sessionStorage.setItem('user', JSON.stringify(newUserInfo));
                             setUserData(newUserInfo);
                         }
-
                     });
                 history.push(from);
                 swal(`Hello 🖐 ,${newUserInfo.name}`, "Your signed in successfully!", "success");

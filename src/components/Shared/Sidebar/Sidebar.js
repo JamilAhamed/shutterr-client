@@ -19,7 +19,6 @@ const Sidebar = () => {
                 </li>
                 <li className="bar-item">
                     <NavLink activeClassName="active-bar" className=" bar-link" to="/dashboard/add-review">
-
                         <i class="fas fa-comments"></i> Review
                       </NavLink>
                 </li>
@@ -29,33 +28,31 @@ const Sidebar = () => {
                     </NavLink>
                 </li>
 
-                {isAdmin === 'true' &&
-                    <li className=" bar-item">
+                {isAdmin  &&
+                    <div>
+                        <li className=" bar-item">
                         <NavLink activeClassName="active-bar" className=" bar-link" to="/dashboard/manage-order">
                             <i class="fas fa-tasks"></i> Manage Order
                       </NavLink>
                     </li>
-                }
-                {isAdmin === 'true' &&
+                
                     <li className=" bar-item">
                         <NavLink activeClassName="active-bar" className=" bar-link" to="/dashboard/add-feature">
                             <i class="fas fa-puzzle-piece"></i> Add Feature
                       </NavLink>
-                    </li>}
-
-                {isAdmin === 'true' &&
+                    </li>
                     <li className=" bar-item">
                         <NavLink activeClassName="active-bar" className=" bar-link" to="/dashboard/add-service">
                             <i class="fab fa-servicestack"></i>  Add Service
                       </NavLink>
                     </li>
-                }
-                {isAdmin === 'true' &&
+                
                     <li className=" bar-item">
                         <NavLink activeClassName="active-bar" className=" bar-link" to="/dashboard/add-admin">
                             <i class="fas fa-user-plus"></i> Add Admin
                       </NavLink>
-                    </li>}
+                    </li>
+                    </div>}
             </ul>
         </div>
     );
