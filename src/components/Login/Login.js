@@ -60,7 +60,7 @@ const Login = () => {
     }
 
 
-    // Handaling Value change of Input fields
+    // Handling Value change of Input fields
     const handleChange = (event) => {
         let isFieldValid = true;
         let isPasswordMatched = true;
@@ -103,7 +103,6 @@ const Login = () => {
     const handleSubmit = (event) => {
         if (newUser && user.email && user.password && user.name) {
             firebase.auth().createUserWithEmailAndPassword(user.email, user.password)
-
                 .then(res => {
                     const { email, displayName } = res.user;
                     const newUserInfo = { email, name: displayName };

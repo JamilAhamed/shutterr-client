@@ -43,8 +43,6 @@ const OrderList = () => {
                     swal("Your order is safe!");
                 }
             });
-
-
     }
 
     return (
@@ -57,7 +55,6 @@ const OrderList = () => {
                 {loading &&
                     <img style={{ width: "150px", margin: "0 auto" }} src={loader} alt="" />
                 }
-
                 {orders.length > 0 &&
                     <div className="mini-card-container">
                         {

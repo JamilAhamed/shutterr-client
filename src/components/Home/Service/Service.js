@@ -15,7 +15,6 @@ const Service = () => {
     const handleClick = (id) => {
         const url = `/dashboard/order/${id}`;
         history.push(url);
-
     }
     return (
         <section id="services">
